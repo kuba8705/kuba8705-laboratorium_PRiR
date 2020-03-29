@@ -2,16 +2,75 @@ html body{
   background-color: gray;
 }
 
+header
+{
+  padding-bottom: 10px;
+}
+
+.Mtop{
+  float: right;
+}
+
+main
+{
+  background-color: #C0C0C0;
+  font-size: large;
+}
+
+section
+{
+  width: 80%;
+  margin: auto;
+  background-color: #D3D3D3;
+  min-height: 400px;
+}
+
+.form-group
+{
+  margin: 20px;
+}
+
 form{
   margin: 25px;
 }
 
+div div
+{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: #d1e0e0;
-color: white;
-text-align: center;
+  margin-top: 25px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  }
+
+section 
+{
+  padding: 25px;
+}
+
+a, a:visited {
+  color: black;
+}
+
+.topnav {
+  background-color: #808080;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav a:hover {
+  color: black;
 }

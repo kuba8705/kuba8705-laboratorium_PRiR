@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Regulamin</title>
+  <title>OcenyFilmow.pl</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -21,15 +21,26 @@
       </form>
     </div>
 
+
  </header>
  <main>
-   <section class="jumpers">
-      <h1>REGULAMIN</h1>
-      <p>Regulamin w trakcie tworzenia</p>
+   <section>
+    <h1>Dodawanie nowego serialu/filmu</h1>
+
+    <form action="/action_page2.php">
+      <label for="fname">Podaj tytuł filmu/serialu:</label>
+      <input type="text" id="fname3" name="fname3"><br><br>
+      <label for="lname">Podaj opis filmu/serialu:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <label for="fname">Obrazek do filmu/serialu:</label>
+      <input type="file"
+       id="obrazek" name="obrazek"
+       accept="image/png, image/jpeg"><br><br>
+      <input type="submit" value="Submit">
+    </form>
 
 
    </section>
-
  </main>
 
 

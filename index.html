@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8">
@@ -9,102 +9,55 @@
 </head>
 
 <body>
-  <header>     
-   <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-      <nav class="navbar navbar-expand-lg navbar-dark style="background-color: #e3f2fd;"">
-      <a class="navbar-brand" href="index.html">OcenyFilmow.pl</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="filmow.html">Ranking Filmow</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="serialow.html">Ranking Seriali</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profil.html">Profil</a>
-          </li>
-         </ul>
+  <header>
 
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Wyszukaj film/serial" aria-label="Search">
-            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Szukaj</button>
-          </form>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Login" aria-label="Search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Haslo" aria-label="Search">
-            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Zaloguj</button>
-          </form>
+<div class="topnav">
+  <a href="index.html">OcenyFilmow.pl</a>
+  <a href="filmow.html">Ranking Filmow</a>
+  <a href="serialow.html">Ranking Seriali</a>
+  <a href="logowanie.html">Zaloguj się/Zarejestruj się</a>
+  <form class="Mtop" action="/action_page1.php">
+    <label for="fname">Wyszukaj film/serial:</label>
+    <input type="text" id="fname" name="fname">
+    <input type="submit" value="Wyszukaj">
+  </form>
+</div>
 
-
-        </div>
-      </nav>
-
-
-
-  </nav>
  </header>
  <main>
-   <section class="jumpers">
-      <div class="accordion" id="accordionExample">
-         <div class="card">
-           <div class="card-header" id="headingOne">
-             <h2 class="mb-0">
-               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <font color="black">Czym jest właściwie OcenyFilmow.pl?</font>
-               </button>
-             </h2>
-           </div>
-       
-           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-             <div class="card-body">
-               OcenyFilmow.pl to polski niezależny serwis filmowy na którym użytkownicy mogą wystawiać oceny filmom.
-             </div>
-           </div>
-         </div>
-         <div class="card">
-           <div class="card-header" id="headingTwo">
-             <h2 class="mb-0">
-               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <font color="black">Gdzie mogę zgłosić problem techniczny?</font>
-               </button>
-             </h2>
-           </div>
-           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-             <div class="card-body">
-               Wszelkie problemy z funkcjonowaniem portalu prosimy zgłaszać na adres pomoc@OcenyFilmow.pl
-             </div>
-           </div>
-         </div>
-         <div class="card">
-           <div class="card-header" id="headingThree">
-             <h2 class="mb-0">
-               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <font color="black">Jak zrezygnować z konta na OcenyFilmow.pl?</font>
-               </button>
-             </h2>
-           </div>
-           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-             <div class="card-body">
-               Należy przesłać informację pod tytułem "Rezygnacja z konta" na adres: pomoc@OcenyFilmow.pl Informacja musi być przesłana z adresu mailowego, który jest obecnie przypisany do konta na OcenyFilmow.pl.
-             </div>
-           </div>
-         </div>
-       </div>
+   <section>
+      <div class="row">
+        <div class="col-sm"><h1>Czym jest właściwie OcenyFilmow.pl?</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><p>OcenyFilmow.pl to polski niezależny serwis filmowy na którym użytkownicy mogą wystawiać oceny filmom lub serialom.</p></div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><h1>Gdzie mogę zgłosić problem techniczny?</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><p>Wszelkie problemy z funkcjonowaniem portalu prosimy zgłaszać na adres pomoc@OcenyFilmow.pl</p></div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><h1>Jak zrezygnować z konta na OcenyFilmow.pl?</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-sm"><p>Należy przesłać informację pod tytułem "Rezygnacja z konta" na adres: pomoc@OcenyFilmow.pl Informacja musi być przesłana z adresu mailowego, który jest obecnie przypisany do konta na OcenyFilmow.pl</p></div>
+      </div>
 
 
    </section>
 
  </main>
 
+ <footer>
+   <div class = "row"></div>
+ </footer>
 
-  <footer class = "row"> <a class ="col-sm" href="reklama.html"><font color="black">Reklama</font></a>
-   <a class ="col-sm" href="regulamin.html"><font color="black">Regulamin</font></a>
-   <a class ="col-sm" href="pomoc.html"><font color="black">Pomoc</font></a>
+
+  <footer class = "row"> <a class ="col-sm" href="reklama.html">Reklama</a>
+   <a class ="col-sm" href="regulamin.html">Regulamin</a>
+   <a class ="col-sm" href="pomoc.html">Pomoc</a>
     <p class ="col-sm">© 1990-2020 by ... Inc.</p> </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
