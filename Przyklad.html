@@ -25,50 +25,25 @@
  <main>
    <section>
 
-    <div class = container>
-      <div class="row">
-        <div class="col-sm"><h1>Tytuł</h1></div>
-      </div>
-      <div class="row">
-        <div class="col-sm"><img src="img/breaking.jpg" alt="Zdjecie filmu/serialu"></div>
-        <div class="col-sm"><p>Przykładowy opis filmu/serialu.</p></div>
-        <div class="row">
-        <div class="col-sm">
-          <h1>Ocena:</h1>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-            <label class="form-check-label" for="exampleRadios1">
-              Jedna Gwiazdka
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            <label class="form-check-label" for="exampleRadios2">
-              Dwie Gwiazdki
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-              Trzy Gwiazdki
-            </label></div>
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-              Cztery Gwiazdki
-            </label></div>
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option3">
-            <label class="form-check-label" for="exampleRadios3">
-              Pięć Gwiazdek
-            </label></div>
-          </div>
-          <div class="col-sm"><p></p> Ocena Urzytkowników: ...
-        </div>
-        </div>
+      <h1>Tytuł</h1><br>
+      <img src="img/breaking.jpg" alt="Zdjecie filmu/serialu"><br>
+      <p>Opis Filmu/Serialu: ...</p>
+      <form action="/action_ocena.php">
+        <input type="radio" id="1" name="ocena" value="1">
+        <label for="1">Jedna Gwiazdka</label><br>
+        <input type="radio" id="2" name="ocena" value="2">
+        <label for="2">Dwie Gwiazdka</label><br>
+        <input type="radio" id="3" name="ocena" value="3">
+        <label for="3">Trzy Gwiazdek</label><br>
+        <input type="radio" id="4" name="ocena" value="4">
+        <label for="4">Cztery Gwiazdki</label><br>
+        <input type="radio" id="5" name="ocena" value="5">
+        <label for="5">Pieć Gwiazdek</label><br>
+      </form> 
 
-      </div>
-      </div>
+      <p>Ocena Urzytkowników: ...</p>
+
+
    </section>
 
  </main>
