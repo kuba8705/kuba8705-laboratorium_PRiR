@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 30 Mar 2020, 23:00
+-- Czas generowania: 02 Maj 2020, 17:23
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.3
 
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `filmy/seriale`
+-- Struktura tabeli dla tabeli `filmy-seriale`
 --
 
-CREATE TABLE `filmy/seriale` (
+CREATE TABLE `filmy-seriale` (
   `id` int(11) NOT NULL,
   `tytul` varchar(50) NOT NULL,
   `zdjecie` varchar(20) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `filmy/seriale` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Zrzut danych tabeli `filmy/seriale`
+-- Zrzut danych tabeli `filmy-seriale`
 --
 
-INSERT INTO `filmy/seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
+INSERT INTO `filmy-seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
 (1, 'Skazani na Shawshank', 'img/01.jpg', 'Adaptacja opowiadania Stephena Kinga. Niesłusznie skazany na dożywocie bankier, stara się przetrwać w brutalnym, więziennym świecie.', 'film'),
 (2, 'Zielona mila', 'img/02.jpg', 'Emerytowany strażnik więzienny opowiada przyjaciółce o niezwykłym mężczyźnie, którego skazano na śmierć za zabójstwo dwóch 9-letnich dziewczynek.', 'film'),
 (3, 'Ojciec chrzestny', 'img/03.jpg', 'Opowieść o nowojorskiej rodzinie mafijnej. Starzejący się Don Corleone pragnie przekazać władzę swojemu synowi.', 'film'),
@@ -62,10 +62,10 @@ INSERT INTO `filmy/seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
 (20, 'Dobry Omen', 'img/20.jpg', 'Opowieść o wizji końca świata widzianej z perspektywy anioła, demona oraz jedenastoletniego antychrysta.', 'serial');
 
 --
--- Wyzwalacze `filmy/seriale`
+-- Wyzwalacze `filmy-seriale`
 --
 DELIMITER $$
-CREATE TRIGGER `FILM_SERIAL` BEFORE INSERT ON `filmy/seriale` FOR EACH ROW BEGIN
+CREATE TRIGGER `FILM_SERIAL` BEFORE INSERT ON `filmy-seriale` FOR EACH ROW BEGIN
 IF NEW.typ=!'serial' OR NEW.typ=!'film' THEN
     CALL `Error: musi byc albo film albo serial`;
   END IF;
@@ -173,9 +173,9 @@ INSERT INTO `użytkownicy` (`id`, `email`, `haslo`, `Data_Dolaczenia`) VALUES
 --
 
 --
--- Indeksy dla tabeli `filmy/seriale`
+-- Indeksy dla tabeli `filmy-seriale`
 --
-ALTER TABLE `filmy/seriale`
+ALTER TABLE `filmy-seriale`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -197,9 +197,9 @@ ALTER TABLE `użytkownicy`
 --
 
 --
--- AUTO_INCREMENT dla tabeli `filmy/seriale`
+-- AUTO_INCREMENT dla tabeli `filmy-seriale`
 --
-ALTER TABLE `filmy/seriale`
+ALTER TABLE `filmy-seriale`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
@@ -216,7 +216,7 @@ ALTER TABLE `użytkownicy`
 -- Ograniczenia dla tabeli `oceny`
 --
 ALTER TABLE `oceny`
-  ADD CONSTRAINT `oceny_ibfk_1` FOREIGN KEY (`id_filmu/serialu`) REFERENCES `filmy/seriale` (`id`),
+  ADD CONSTRAINT `oceny_ibfk_1` FOREIGN KEY (`id_filmu/serialu`) REFERENCES `filmy-seriale` (`id`),
   ADD CONSTRAINT `oceny_ibfk_2` FOREIGN KEY (`id_użytkownika`) REFERENCES `użytkownicy` (`id`);
 COMMIT;
 
