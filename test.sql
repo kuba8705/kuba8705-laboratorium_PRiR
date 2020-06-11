@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 02 Maj 2020, 17:23
+-- Czas generowania: 11 Cze 2020, 23:22
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.3
 
@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `filmy-seriale`
+-- Struktura tabeli dla tabeli `filmy_seriale`
 --
 
-CREATE TABLE `filmy-seriale` (
+CREATE TABLE `filmy_seriale` (
   `id` int(11) NOT NULL,
   `tytul` varchar(50) NOT NULL,
   `zdjecie` varchar(20) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `filmy-seriale` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Zrzut danych tabeli `filmy-seriale`
+-- Zrzut danych tabeli `filmy_seriale`
 --
 
-INSERT INTO `filmy-seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
+INSERT INTO `filmy_seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
 (1, 'Skazani na Shawshank', 'img/01.jpg', 'Adaptacja opowiadania Stephena Kinga. Niesłusznie skazany na dożywocie bankier, stara się przetrwać w brutalnym, więziennym świecie.', 'film'),
 (2, 'Zielona mila', 'img/02.jpg', 'Emerytowany strażnik więzienny opowiada przyjaciółce o niezwykłym mężczyźnie, którego skazano na śmierć za zabójstwo dwóch 9-letnich dziewczynek.', 'film'),
 (3, 'Ojciec chrzestny', 'img/03.jpg', 'Opowieść o nowojorskiej rodzinie mafijnej. Starzejący się Don Corleone pragnie przekazać władzę swojemu synowi.', 'film'),
@@ -53,19 +53,20 @@ INSERT INTO `filmy-seriale` (`id`, `tytul`, `zdjecie`, `opis`, `typ`) VALUES
 (10, 'Irlandczyk', 'img/10.jpg', 'Miłośnicy gangsterskich klimatów i epickich historii spędzą udany seans z „Irlandczykiem”. Robert De Niro, Al Pacino i Joe Pesci zabiorą Cię na prawdziwą ucztę kinomana. Tym razem odwiedzisz przestępczy półświatek powojennej Ameryki, widziany oczami zabójcy, Franka Sheerana.', 'film'),
 (11, 'Dwoch papiezy', 'img/11.jpg', 'Obraz Fernanda Meirellesa - \"Dwóch papieży\" - zachwyca grą aktorską i doskonałą realizacją. Przedstawiona w nim historia jest oparta na kanwie prawdziwych wydarzeń. W opowieści przedstawiającej relacje między Josephem Ratzingerem (papieżem Benedyktem XV) a Jorge Bergoglio (papieżem Franciszkiem), główne role odegrali dwaj znakomici aktorzy - Anthony Hopkins i Jonathan Pryce.', 'film'),
 (12, 'Zabojczy rejs', 'img/12.jpg', 'Doskonały duet aktorski - Adam Sandler i Jennifer Aniston w lekkiej komedii z kryminalnym wątkiem w tle dadzą okazję do wspaniałej zabawy. Policjant Nick i jego żona, Audrey, wybierają się w wymarzoną podróż po Europie. Podczas wyprawy małżeństwo poznaje Charlesa (Luke Evans), który zabiera parę na spotkanie na jachcie należącym do miliardera. Gospodarz zostaje jednak zamordowany, a podejrzenie w tej sprawie pada na Nicka i Audrey.', 'film'),
-(13, 'Diego', 'img/13.jpg', 'Kolejny dokument o światowej gwieździe, tym razem piłki nożnej, w wykonaniu Asifa Kapadii. Reżysera interesuje głównie pobyt “boskiego” Diego Maradony w Neapolu, gdzie dla lokalnej drużyny zdobywał trofea w latach 80. XX wieku. Rozpoczyna od brawurowego przedstawienia przeszłości bohatera, by później powoli ukazywać blaski i cienie losów jednego z najwybitniejszych sportowców z tej dziedziny.', ''),
+(13, 'Diego', 'img/13.jpg', 'Kolejny dokument o światowej gwieździe, tym razem piłki nożnej, w wykonaniu Asifa Kapadii. Reżysera interesuje głównie pobyt “boskiego” Diego Maradony w Neapolu, gdzie dla lokalnej drużyny zdobywał trofea w latach 80. XX wieku. Rozpoczyna od brawurowego przedstawienia przeszłości bohatera, by później powoli ukazywać blaski i cienie losów jednego z najwybitniejszych sportowców z tej dziedziny.', 'film'),
 (15, 'Rok za rokiem', 'img/15.jpg', 'Serialowe opowieści o przyszłości zwykle sprowadzają się do bardzo odległych od naszej współczesności wydarzeń, gdzie potężny postęp technologiczny doprowadził do czegoś na kształt utopii lub (znacznie częściej) dystopii. Twórcy miniserialu „Rok za rokiem” zdecydowali się jednak na zupełnie inną fabułę. Produkcja HBO i BBC pokazuje społeczno-polityczny rozwój Wielkiej Brytanii w następnych piętnastu latach na przykładzie życia pojedynczej, pochodzącej z Manchesteru rodziny Lyonsów. Produkcja doczekała się pochwał przede wszystkim ze względu na swój sprytny scenariusz oraz dobrze dobraną obsadę. Serial obejrzycie na HBO GO.', 'serial'),
 (16, 'The Mandalorian', 'img/16.jpg', 'Samotny łowca głów przemierza najdalsze zakątki galaktyki, z dala od władzy Nowej Republiki.', 'serial'),
 (17, 'Nasza planeta', 'img/17.jpg', 'Widowiskowe ujęcia rzadko spotykanych zwierząt zostają zestawione z gorzkimi refleksjami o wpływie ludzkości na ich siedliska i inne gatunki zamieszkujące naszą planetę.', 'serial'),
 (18, 'Czarnobyl', 'img/18.jpg', 'Po wybuchu elektrowni jądrowej w Czarnobylu ratownicy poświęcają zdrowie i życie, by ratować Europę przed skutkami katastrofy.', 'serial'),
 (19, 'Euforia', 'img/19.jpg', 'Życie uzależnionej od narkotyków nastolatki zmienia się, gdy poznaje transseksualną dziewczynę, która przybyła do miasta.', 'serial'),
-(20, 'Dobry Omen', 'img/20.jpg', 'Opowieść o wizji końca świata widzianej z perspektywy anioła, demona oraz jedenastoletniego antychrysta.', 'serial');
+(20, 'Dobry Omen', 'img/20.jpg', 'Opowieść o wizji końca świata widzianej z perspektywy anioła, demona oraz jedenastoletniego antychrysta.', 'serial'),
+(21, 'y', '', 'y', 'film');
 
 --
--- Wyzwalacze `filmy-seriale`
+-- Wyzwalacze `filmy_seriale`
 --
 DELIMITER $$
-CREATE TRIGGER `FILM_SERIAL` BEFORE INSERT ON `filmy-seriale` FOR EACH ROW BEGIN
+CREATE TRIGGER `FILM_SERIAL` BEFORE INSERT ON `filmy_seriale` FOR EACH ROW BEGIN
 IF NEW.typ=!'serial' OR NEW.typ=!'film' THEN
     CALL `Error: musi byc albo film albo serial`;
   END IF;
@@ -80,8 +81,8 @@ DELIMITER ;
 --
 
 CREATE TABLE `oceny` (
-  `id_użytkownika` int(11) NOT NULL,
-  `id_filmu/serialu` int(11) NOT NULL,
+  `id_uzytkownika` int(11) NOT NULL,
+  `id_filmu_serialu` int(11) NOT NULL,
   `ocena` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -89,7 +90,7 @@ CREATE TABLE `oceny` (
 -- Zrzut danych tabeli `oceny`
 --
 
-INSERT INTO `oceny` (`id_użytkownika`, `id_filmu/serialu`, `ocena`) VALUES
+INSERT INTO `oceny` (`id_uzytkownika`, `id_filmu_serialu`, `ocena`) VALUES
 (1, 8, 1),
 (1, 18, 2),
 (1, 13, 3),
@@ -119,7 +120,9 @@ INSERT INTO `oceny` (`id_użytkownika`, `id_filmu/serialu`, `ocena`) VALUES
 (16, 13, 2),
 (16, 16, 3),
 (15, 9, 4),
-(16, 2, 5);
+(16, 2, 5),
+(1, 11, 1),
+(20, 3, 5);
 
 --
 -- Wyzwalacze `oceny`
@@ -136,10 +139,10 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `użytkownicy`
+-- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
-CREATE TABLE `użytkownicy` (
+CREATE TABLE `uzytkownicy` (
   `id` int(11) NOT NULL,
   `email` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
   `haslo` text CHARACTER SET utf16 COLLATE utf16_polish_ci NOT NULL,
@@ -147,11 +150,11 @@ CREATE TABLE `użytkownicy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Zrzut danych tabeli `użytkownicy`
+-- Zrzut danych tabeli `uzytkownicy`
 --
 
-INSERT INTO `użytkownicy` (`id`, `email`, `haslo`, `Data_Dolaczenia`) VALUES
-(1, '1@gmail.com', 'C92C0BABDC764D8674BCEA14A55D867D', '2020-03-01'),
+INSERT INTO `uzytkownicy` (`id`, `email`, `haslo`, `Data_Dolaczenia`) VALUES
+(1, '1@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '2020-03-01'),
 (2, '2@gmail.com', 'EF39FBF69170B58787CE4E574DB9D842', '2020-03-01'),
 (3, '3@gmail.com', '3AB1FAAD513E753501264A716622BA06', '2020-03-05'),
 (4, '4@gmail.com', '45992A02F948FE230C3265AE8175B91B', '2020-03-12'),
@@ -166,29 +169,33 @@ INSERT INTO `użytkownicy` (`id`, `email`, `haslo`, `Data_Dolaczenia`) VALUES
 (13, '13@gmail.com', '4F352F25539DEA0DD1C53EA76E4E4497', '2020-03-05'),
 (14, '14@gmail.com', '22EF826989C1D8BE42ECAD47689975D4', '2020-03-06'),
 (15, '15@gmail.com', '67AA131449DDD81364A4F817CA9310EB', '2020-03-07'),
-(16, '16@gmail.com', '4CE895CB16A5563827376712DF12A617', '2020-03-19');
+(16, '16@gmail.com', '4CE895CB16A5563827376712DF12A617', '2020-03-19'),
+(17, 'iii@gmail.com', '865c0c0b4ab0e063e5caa3387c1a8741', '2020-06-11'),
+(18, 'oo@gmail.com', '0cc175b9c0f1b6a831c399e269772661', '2020-06-11'),
+(19, '100@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', '2020-06-11'),
+(20, 'b', '92eb5ffee6ae2fec3ad71c777531578f', '2020-06-11');
 
 --
 -- Indeksy dla zrzutów tabel
 --
 
 --
--- Indeksy dla tabeli `filmy-seriale`
+-- Indeksy dla tabeli `filmy_seriale`
 --
-ALTER TABLE `filmy-seriale`
+ALTER TABLE `filmy_seriale`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `oceny`
 --
 ALTER TABLE `oceny`
-  ADD KEY `id_filmu/serialu` (`id_filmu/serialu`),
-  ADD KEY `id_użytkownika` (`id_użytkownika`);
+  ADD KEY `id_filmu/serialu` (`id_filmu_serialu`),
+  ADD KEY `id_użytkownika` (`id_uzytkownika`);
 
 --
--- Indeksy dla tabeli `użytkownicy`
+-- Indeksy dla tabeli `uzytkownicy`
 --
-ALTER TABLE `użytkownicy`
+ALTER TABLE `uzytkownicy`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
@@ -197,16 +204,16 @@ ALTER TABLE `użytkownicy`
 --
 
 --
--- AUTO_INCREMENT dla tabeli `filmy-seriale`
+-- AUTO_INCREMENT dla tabeli `filmy_seriale`
 --
-ALTER TABLE `filmy-seriale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `filmy_seriale`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT dla tabeli `użytkownicy`
+-- AUTO_INCREMENT dla tabeli `uzytkownicy`
 --
-ALTER TABLE `użytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+ALTER TABLE `uzytkownicy`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Ograniczenia dla zrzutów tabel
@@ -216,8 +223,8 @@ ALTER TABLE `użytkownicy`
 -- Ograniczenia dla tabeli `oceny`
 --
 ALTER TABLE `oceny`
-  ADD CONSTRAINT `oceny_ibfk_1` FOREIGN KEY (`id_filmu/serialu`) REFERENCES `filmy-seriale` (`id`),
-  ADD CONSTRAINT `oceny_ibfk_2` FOREIGN KEY (`id_użytkownika`) REFERENCES `użytkownicy` (`id`);
+  ADD CONSTRAINT `oceny_ibfk_1` FOREIGN KEY (`id_filmu_serialu`) REFERENCES `filmy_seriale` (`id`),
+  ADD CONSTRAINT `oceny_ibfk_2` FOREIGN KEY (`id_uzytkownika`) REFERENCES `uzytkownicy` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
